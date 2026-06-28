@@ -34,7 +34,7 @@ export function HeroSection() {
 
           {/* Headline */}
           <div className="flex flex-col w-full mb-[30px]">
-            <h1 className="font-['Montserrat'] font-bold text-[60px] leading-[65px] uppercase text-white flex flex-col sm:block">
+            <h1 className="font-montserrat font-bold text-[60px] leading-[65px] uppercase text-white flex flex-col sm:block">
               <span>Pay </span>
               <span className="italic text-[#f5c542]">after you win </span>
               <span>& GET 10% CASH BACK</span>
