@@ -14,6 +14,7 @@ import {
   X,
 } from 'lucide-react';
 import React from 'react';
+import Image from 'next/image';
 
 /* ──────────────────────────────────────────────────────────────────────────── */
 /*  Brand mark helpers                                                         */
@@ -25,40 +26,20 @@ const AppleLogo = ({ size = 20, className = '' }) => (
   </svg>
 );
 
-const Bet365Mark = ({ className = 'text-[11px]' }) => (
-  <span className={`font-extrabold tracking-tight ${className}`} style={{ color: '#6ACC53' }}>
-    bet<span style={{ color: '#ffffff' }}>365</span>
-  </span>
+const Bet365Mark = ({ className = '' }) => (
+  <Image src='/bet365.svg' alt='bet365' width={28} height={28} className={`object-contain ${className}`} />
 );
 
-const FanduelMark = ({ className = 'text-[9px]' }) => (
-  <span
-    className={`flex items-center gap-[3px] font-black tracking-tight ${className}`}
-    style={{ color: '#0FAFFF' }}
-  >
-    <Shield size={11} strokeWidth={2.5} fill='#0FAFFF' />
-    FANDUEL
-  </span>
+const FanduelMark = ({ className = '' }) => (
+  <Image src='/fanduel.svg' alt='Fanduel' width={28} height={28} className={`object-contain ${className}`} />
 );
 
-const CaesarsMark = ({ className = 'text-[9px]' }) => (
-  <span
-    className={`flex items-center gap-[3px] font-black tracking-tight ${className}`}
-    style={{ color: '#D4AF37' }}
-  >
-    <Crown size={11} strokeWidth={2.5} />
-    CAESARS
-  </span>
+const CaesarsMark = ({ className = '' }) => (
+  <Image src='/caseers.svg' alt='Caesars' width={28} height={28} className={`object-contain ${className}`} />
 );
 
-const DraftKingsMark = ({ className = 'text-[9px]' }) => (
-  <span
-    className={`flex items-center gap-[3px] font-black tracking-tight ${className}`}
-    style={{ color: '#FF7411' }}
-  >
-    <Crown size={11} strokeWidth={2.5} />
-    DK
-  </span>
+const DraftKingsMark = ({ className = '' }) => (
+  <Image src='/druftKing.svg' alt='DraftKings' width={28} height={28} className={`object-contain ${className}`} />
 );
 
 /* ──────────────────────────────────────────────────────────────────────────── */
@@ -100,6 +81,8 @@ function TeamBanner({
   name1,
   abbr2,
   name2,
+  logo1,
+  logo2,
 }: {
   color1: string;
   color2: string;
@@ -107,6 +90,8 @@ function TeamBanner({
   name1: string;
   abbr2: string;
   name2: string;
+  logo1?: string;
+  logo2?: string;
 }) {
   return (
     <div className='absolute top-[51px] left-[20px] w-[calc(100%-40px)] h-[107px] rounded-[16px] overflow-hidden'>
@@ -120,18 +105,26 @@ function TeamBanner({
 
       {/* left team crest */}
       <div
-        className='absolute top-[10px] left-[10px] flex items-center justify-center w-[44px] h-[44px] rounded-[24px] border border-[rgba(255,255,255,0.1)]'
+        className='absolute top-[10px] left-[10px] flex items-center justify-center w-[44px] h-[44px] rounded-[24px] border border-[rgba(255,255,255,0.1)] overflow-hidden'
         style={{ backgroundColor: color1 }}
       >
-        <span className='text-[11px] font-black text-white'>{abbr1}</span>
+        {logo1 ? (
+          <Image src={logo1} alt={abbr1} width={30} height={30} className='object-contain' />
+        ) : (
+          <span className='text-[11px] font-black text-white'>{abbr1}</span>
+        )}
       </div>
 
       {/* right team crest */}
       <div
-        className='absolute top-[10px] right-[10px] flex items-center justify-center w-[44px] h-[44px] rounded-[24px] border border-[rgba(255,255,255,0.1)]'
+        className='absolute top-[10px] right-[10px] flex items-center justify-center w-[44px] h-[44px] rounded-[24px] border border-[rgba(255,255,255,0.1)] overflow-hidden'
         style={{ backgroundColor: color2 }}
       >
-        <span className='text-[11px] font-black text-white'>{abbr2}</span>
+        {logo2 ? (
+          <Image src={logo2} alt={abbr2} width={30} height={30} className='object-contain' />
+        ) : (
+          <span className='text-[11px] font-black text-white'>{abbr2}</span>
+        )}
       </div>
 
       {/* left team text */}
@@ -231,6 +224,8 @@ function LockedCard() {
         name1='Bills'
         abbr2='NYJ'
         name2='Jets'
+        logo1='/h1.svg'
+        logo2='/h2.svg'
       />
 
       <LeagueMarketRow top='173px' />
@@ -451,6 +446,8 @@ function PurchasedCard() {
         name1='Chiefs'
         abbr2='NYG'
         name2='Giants'
+        logo1='/h1.svg'
+        logo2='/h2.svg'
       />
 
       <LeagueMarketRow top='173px' />

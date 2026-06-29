@@ -1,5 +1,6 @@
 import React from 'react';
 import { ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 
 /* ──────────────────────────────────────────────────────────────────────────── */
 /*  Icons & Logos                                                              */
@@ -25,81 +26,26 @@ const StarIcon = ({ size = 16, className = '' }: { size?: number; className?: st
 );
 
 const Bet365Logo = () => (
-  <span className='font-black tracking-tight text-[28px] leading-none'>
-    <span style={{ color: '#00B181' }}>bet</span>
-    <span style={{ color: '#F9C924' }}>365</span>
-  </span>
+  <div className='flex items-center h-full'>
+    <Image src='/bet365Crown.svg' alt='bet365' width={100} height={32} className='object-contain object-left' />
+  </div>
 );
 
 const DraftKingsLogo = () => (
-  <div className='flex items-center gap-[6px]'>
-    <div className='flex flex-col items-center justify-center'>
-      <svg width='18' height='12' viewBox='0 0 16 16' fill='none' className='mb-[-2px]'>
-        <path
-          d='M2 13L3.5 6L6 9L8 4L10 9L12.5 6L14 13H2Z'
-          fill='#FF7411'
-          stroke='#FF7411'
-          strokeWidth='1.5'
-          strokeLinecap='round'
-          strokeLinejoin='round'
-        />
-      </svg>
-      <span className='font-black tracking-tight text-[16px] leading-[1]' style={{ color: '#ffffff' }}>
-        DRAFTKINGS
-      </span>
-    </div>
+  <div className='flex items-center h-full'>
+    <Image src='/draftSung.png' alt='DraftKings' width={100} height={32} className='object-contain object-left' />
   </div>
 );
 
 const FanduelLogo = () => (
-  <div className='flex items-center gap-[8px]'>
-    <svg width='28' height='28' viewBox='0 0 32 32' fill='none'>
-      <path
-        d='M16 0C7.163 0 0 7.163 0 16C0 24.837 7.163 32 16 32C24.837 32 32 24.837 32 16C32 7.163 24.837 0 16 0Z'
-        fill='#0FAFFF'
-      />
-      <path
-        d='M22.5 10H14.5C12.567 10 11 11.567 11 13.5V23.5L16.5 18V14.5C16.5 13.948 16.948 13.5 17.5 13.5H22.5V10Z'
-        fill='white'
-      />
-      <path d='M16.5 22.5L22 17V22.5H16.5Z' fill='white' />
-    </svg>
-    <div className='flex flex-col justify-center'>
-      <span
-        className='font-black tracking-tight text-[16px] leading-[1]'
-        style={{ color: '#0FAFFF' }}
-      >
-        FANDUEL
-      </span>
-      <span
-        className='text-[7px] font-black tracking-widest leading-[1] mt-[2px]'
-        style={{ color: '#0FAFFF' }}
-      >
-        SPORTS NETWORK
-      </span>
-    </div>
+  <div className='flex items-center h-full'>
+    <Image src='/fanduelWithText.svg' alt='Fanduel' width={100} height={32} className='object-contain object-left' />
   </div>
 );
 
 const CaesarsLogo = () => (
-  <div className='flex items-center gap-[8px]'>
-    <div className='w-[28px] h-[28px] rounded-[4px] border border-[#D4AF37] flex items-center justify-center bg-[#1A1A1A]'>
-      <span className='text-[16px]'>🏆</span>
-    </div>
-    <div className='flex flex-col justify-center'>
-      <span
-        className='font-bold tracking-tight text-[10px] leading-[1]'
-        style={{ color: '#ffffff' }}
-      >
-        CAESARS
-      </span>
-      <span
-        className='font-black tracking-tight text-[16px] leading-[1] mt-[2px]'
-        style={{ color: '#D4AF37' }}
-      >
-        SPORTSBOOK
-      </span>
-    </div>
+  <div className='flex items-center h-full'>
+    <Image src='/caesersTextlogo.svg' alt='Caesars' width={100} height={32} className='object-contain object-left' />
   </div>
 );
 

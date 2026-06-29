@@ -1,5 +1,5 @@
-import React from 'react';
 import { ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 
 /* ──────────────────────────────────────────────────────────────────────────── */
 /*  Icons & Logos                                                              */
@@ -35,45 +35,44 @@ const StarIcon = ({ size = 10, className = '' }) => (
 
 /* Inline sportsbook brand marks matching the image styling closely */
 const Bet365Mark = () => (
-  <div className='flex items-start'>
-    <span className='font-extrabold tracking-tight text-[15px]' style={{ color: '#00B181' }}>
-      bet<span style={{ color: '#ffffff' }}>365</span>
-    </span>
-    <CrownIcon />
+  <div className='flex items-center'>
+    <Image src='/bet365Crown.svg' alt='bet365' width={72} height={24} className='object-contain' />
   </div>
 );
 
 const DraftKingsMark = () => (
-  <div className='flex items-center gap-[4px]'>
-    <div className='w-[14px] h-[14px] relative'>
-      <span className='absolute inset-0 text-[#E5B55C] font-black text-[12px] leading-none'>D</span>
-      <CrownIcon />
-    </div>
-    <span className='font-black tracking-tight text-[12px]' style={{ color: '#ffffff' }}>
-      DRAFTKINGS
-    </span>
+  <div className='flex items-center'>
+    <Image
+      src='/draftSung.png'
+      alt='DraftKings'
+      width={72}
+      height={24}
+      className='object-contain'
+    />
   </div>
 );
 
 const FanduelMark = () => (
-  <div className='flex items-center gap-[4px]'>
-    <span className='w-[14px] h-[14px] rounded-full bg-[#0FAFFF] flex items-center justify-center shrink-0'>
-      <span className='text-white text-[8px] font-bold italic'>F</span>
-    </span>
-    <span className='font-black tracking-tight text-[12px]' style={{ color: '#0FAFFF' }}>
-      FANDUEL
-    </span>
+  <div className='flex items-center'>
+    <Image
+      src='/fanduelWithText.svg'
+      alt='Fanduel'
+      width={72}
+      height={24}
+      className='object-contain'
+    />
   </div>
 );
 
 const CaesarsMark = () => (
-  <div className='flex items-center gap-[4px]'>
-    <span className='w-[14px] h-[14px] rounded-full border border-[#D4AF37] text-[#D4AF37] flex items-center justify-center text-[8px] font-black'>
-      C
-    </span>
-    <span className='font-black tracking-tight text-[11px]' style={{ color: '#D4AF37' }}>
-      CAESARS
-    </span>
+  <div className='flex items-center'>
+    <Image
+      src='/caesersTextlogo.svg'
+      alt='Caesars'
+      width={72}
+      height={24}
+      className='object-contain'
+    />
   </div>
 );
 
@@ -215,7 +214,9 @@ export function LiveBettingLines() {
                   Time (ET)
                 </span>
               </div>
-              <div className={`${COL_BOOK} bg-[#2F3E29] rounded-t-[16px] border-x border-[#2F3E29]`}>
+              <div
+                className={`${COL_BOOK} bg-[#2F3E29] rounded-t-[16px] border-x border-[#2F3E29]`}
+              >
                 <Bet365Mark />
               </div>
               <div className={`${COL_BOOK} border-l border-[#222]`}>
@@ -246,9 +247,15 @@ export function LiveBettingLines() {
                   <div className={`${COL_MATCHUP} flex items-center justify-between bg-[#242424]`}>
                     <div className='flex items-center gap-[10px]'>
                       <div
-                        className={`w-[40px] h-[40px] rounded-full ${match.t1.bg} text-white flex items-center justify-center`}
+                        className={`w-[40px] h-[40px] rounded-full ${match.t1.bg} text-white flex items-center justify-center overflow-hidden`}
                       >
-                        <HelmetIcon />
+                        <Image
+                          src='/h1.svg'
+                          alt={match.t1.name}
+                          width={24}
+                          height={24}
+                          className='object-contain'
+                        />
                       </div>
                       <div className='flex flex-col'>
                         <span className='text-[16px] font-bold text-white leading-tight'>
@@ -272,9 +279,15 @@ export function LiveBettingLines() {
                         </span>
                       </div>
                       <div
-                        className={`w-[40px] h-[40px] rounded-full ${match.t2.bg} text-white flex items-center justify-center`}
+                        className={`w-[40px] h-[40px] rounded-full ${match.t2.bg} text-white flex items-center justify-center overflow-hidden`}
                       >
-                        <HelmetIcon />
+                        <Image
+                          src='/h2.svg'
+                          alt={match.t2.name}
+                          width={24}
+                          height={24}
+                          className='object-contain'
+                        />
                       </div>
                     </div>
                   </div>

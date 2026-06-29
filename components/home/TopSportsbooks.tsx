@@ -1,32 +1,53 @@
-import React from 'react';
 import { ChevronRight } from 'lucide-react';
+import Image from 'next/image';
 
 /* Inline sportsbook brand marks */
 const Bet365Mark = () => (
-  <span className='font-extrabold tracking-tight text-[13px]' style={{ color: '#6ACC53' }}>
-    bet<span style={{ color: '#ffffff' }}>365</span>
-  </span>
+  <div className='flex items-center'>
+    <Image
+      src='/bet365Crown.svg'
+      alt='bet365'
+      width={72}
+      height={24}
+      className='object-contain object-left'
+    />
+  </div>
 );
 
 const FanduelMark = () => (
-  <div className='flex items-center gap-[3px]'>
-    <span className='w-[10px] h-[10px] rounded-full bg-[#0FAFFF] flex items-center justify-center shrink-0' />
-    <span className='font-black tracking-tight text-[11px]' style={{ color: '#0FAFFF' }}>
-      FANDUEL
-    </span>
+  <div className='flex items-center'>
+    <Image
+      src='/fanduelWithText.svg'
+      alt='Fanduel'
+      width={72}
+      height={24}
+      className='object-contain object-left'
+    />
   </div>
 );
 
 const DraftKingsMark = () => (
-  <span className='font-black tracking-tight text-[11px]' style={{ color: '#FF7411' }}>
-    DRAFTKINGS
-  </span>
+  <div className='flex items-center'>
+    <Image
+      src='/draftSung.png'
+      alt='DraftKings'
+      width={72}
+      height={24}
+      className='object-contain object-left'
+    />
+  </div>
 );
 
 const CaesarsMark = () => (
-  <span className='font-black tracking-tight text-[10px]' style={{ color: '#D4AF37' }}>
-    CAESARS SPORTSBOOK
-  </span>
+  <div className='flex items-center'>
+    <Image
+      src='/caesersTextlogo.svg'
+      alt='Caesars'
+      width={72}
+      height={24}
+      className='object-contain object-left'
+    />
+  </div>
 );
 
 const books = [

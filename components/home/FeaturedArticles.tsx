@@ -1,10 +1,9 @@
 import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
-/* Figma image assets served by the local MCP asset server */
-const imgArticle1 = 'http://localhost:3845/assets/7b433607ef2d88a50338f81d88924c0e2edc736b.png';
-const imgArticle2 = 'http://localhost:3845/assets/707f34a6ddd2e330f14debc27a59a36e7059f03b.png';
-const imgArticle3 = 'http://localhost:3845/assets/2a4e41c97cbcdaa0029917beaa513c33a44ae2db.png';
+const imgArticle1 = '/featuredArticale1.svg';
+const imgArticle2 = '/featuredArticale2.svg';
+const imgArticle3 = '/featuredArticale3.svg';
 
 const articles = [
   { img: imgArticle1, title: 'NFL Week 8 Best Bets & Predictions' },
