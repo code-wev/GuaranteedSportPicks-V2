@@ -4,7 +4,6 @@ import {
   ChevronDown,
   ChevronRight,
   Clock,
-  Crown,
   ExternalLinkIcon,
   Gift,
   Info,
@@ -13,11 +12,11 @@ import {
   ShoppingCart,
   X,
 } from 'lucide-react';
-import React from 'react';
 import Image from 'next/image';
+import React from 'react';
 
 /* ──────────────────────────────────────────────────────────────────────────── */
-/*  Brand mark helpers                                                         */
+/*  Brand mark helpers                                                          */
 /* ──────────────────────────────────────────────────────────────────────────── */
 
 const AppleLogo = ({ size = 20, className = '' }) => (
@@ -27,19 +26,43 @@ const AppleLogo = ({ size = 20, className = '' }) => (
 );
 
 const Bet365Mark = ({ className = '' }) => (
-  <Image src='/bet365.svg' alt='bet365' width={28} height={28} className={`object-contain ${className}`} />
+  <Image
+    src='/bet365.svg'
+    alt='bet365'
+    width={28}
+    height={28}
+    className={`object-contain ${className}`}
+  />
 );
 
 const FanduelMark = ({ className = '' }) => (
-  <Image src='/fanduel.svg' alt='Fanduel' width={28} height={28} className={`object-contain ${className}`} />
+  <Image
+    src='/fanduel.svg'
+    alt='Fanduel'
+    width={28}
+    height={28}
+    className={`object-contain ${className}`}
+  />
 );
 
 const CaesarsMark = ({ className = '' }) => (
-  <Image src='/caseers.svg' alt='Caesars' width={28} height={28} className={`object-contain ${className}`} />
+  <Image
+    src='/caseers.svg'
+    alt='Caesars'
+    width={28}
+    height={28}
+    className={`object-contain ${className}`}
+  />
 );
 
 const DraftKingsMark = ({ className = '' }) => (
-  <Image src='/druftKing.svg' alt='DraftKings' width={28} height={28} className={`object-contain ${className}`} />
+  <Image
+    src='/druftKing.svg'
+    alt='DraftKings'
+    width={28}
+    height={28}
+    className={`object-contain ${className}`}
+  />
 );
 
 /* ──────────────────────────────────────────────────────────────────────────── */

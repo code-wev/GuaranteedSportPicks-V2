@@ -1,5 +1,4 @@
 import {
-  ArrowUpRight,
   Calendar,
   CircleDollarSign,
   Clock,
@@ -16,13 +15,14 @@ export function HeroSection() {
       {/* Background Image Overlay */}
       <div className='absolute inset-0 w-full h-full'>
         <Image
-          src='/Image.png'
+          src='/HeroBannerBG.png'
           alt='Background'
           fill
           priority
-          className='object-cover object-center opacity-60'
+          className='object-cover object-center opacity-70'
         />
-        <div className='absolute inset-0 bg-gradient-to-r from-black via-black/50 to-transparent' />
+        {/* Subtle dark effect to match the Figma vibe without completely blacking it out */}
+        <div className='absolute inset-0 bg-black/30' />
       </div>
 
       <div className='relative z-10 w-full max-w-[1920px] mx-auto px-4 xl:px-[200px] py-[60px] flex flex-col xl:flex-row items-center justify-between gap-[40px]'>
@@ -56,17 +56,27 @@ export function HeroSection() {
               <span className='font-sans font-medium text-[18px] leading-[28px] text-black whitespace-nowrap'>
                 Get Today&apos;s Picks
               </span>
-              <div className='w-[24px] h-[24px] rounded-full border border-black/20 flex items-center justify-center'>
-                <ArrowUpRight className='w-[14px] h-[14px] text-black' strokeWidth={2} />
-              </div>
+              <Image
+                src='/ArrowIcon.png'
+                alt='Arrow'
+                width={19}
+                height={20}
+                style={{ width: '19.357px', height: '19.999px' }}
+                className='object-contain flex-shrink-0'
+              />
             </button>
             <button className='flex items-center justify-center gap-[10px] px-[30px] py-[10px] rounded-[24px] bg-[rgba(255,255,255,0.1)] border border-[#f9c924] backdrop-blur-[15px] hover:bg-[rgba(255,255,255,0.15)] transition-all'>
               <span className='font-sans font-medium text-[18px] leading-[28px] text-white whitespace-nowrap'>
                 Register Now
               </span>
-              <div className='w-[24px] h-[24px] rounded-full border border-white/20 flex items-center justify-center'>
-                <ArrowUpRight className='w-[14px] h-[14px] text-white' strokeWidth={2} />
-              </div>
+              <Image
+                src='/ArrowIcon.png'
+                alt='Arrow'
+                width={19}
+                height={20}
+                style={{ width: '19.357px', height: '19.999px' }}
+                className='object-contain flex-shrink-0 brightness-0 invert'
+              />
             </button>
           </div>
 
@@ -177,42 +187,49 @@ export function HeroSection() {
               </div>
 
               {/* VS Block */}
-              <div className='mt-[25px] relative max-w-[340px]'>
-                {/* Background for VS block */}
-                <div className='absolute inset-0 bg-[rgba(255,255,255,0.05)] rounded-[24px] -z-10' />
+              <div className='mt-[25px] relative max-w-[340px] rounded-[16px] overflow-hidden flex flex-col border border-[rgba(255,255,255,0.1)]'>
+                {/* Top Teams Area */}
+                <div className='flex items-center justify-between p-[18px] relative z-10'>
+                  {/* Diagonal split background */}
+                  <div className='absolute inset-0 bg-[linear-gradient(105deg,rgba(47,119,202,0.1)_50%,rgba(64,169,108,0.1)_50%)] -z-10' />
 
-                <div className='flex items-center justify-between p-[15px]'>
                   <div className='flex items-center gap-[12px]'>
-                    <div className='w-[40px] h-[40px] bg-[#2f77ca] rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(47,119,202,0.5)] border border-white/10 overflow-hidden'>
+                    <div className='w-[48px] h-[48px] bg-[#2f77ca] rounded-full flex items-center justify-center overflow-hidden flex-shrink-0'>
                       <Image
                         src='/h1.svg'
                         alt='BUF'
-                        width={30}
-                        height={30}
+                        width={28}
+                        height={28}
                         className='object-contain'
                       />
                     </div>
                     <div className='flex flex-col'>
-                      <span className='text-white font-semibold text-[16px]'>BUF</span>
-                      <span className='text-white/90 text-[12px]'>Bills</span>
+                      <span className='text-white font-semibold text-[18px] leading-[22px]'>
+                        BUF
+                      </span>
+                      <span className='text-white/70 text-[13px] leading-[16px]'>Bills</span>
                     </div>
                   </div>
 
-                  <div className='px-[10px] py-[5px] rounded-[22px] bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] flex items-center justify-center'>
-                    <span className='text-white font-medium italic text-[14px]'>VS</span>
+                  <div className='w-[40px] h-[40px] rounded-full bg-[rgba(255,255,255,0.1)] border border-[rgba(255,255,255,0.1)] backdrop-blur-[5px] flex items-center justify-center absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 z-20'>
+                    <span className='text-white font-medium italic text-[15px] tracking-wide'>
+                      VS
+                    </span>
                   </div>
 
                   <div className='flex items-center gap-[12px]'>
                     <div className='flex flex-col items-end'>
-                      <span className='text-white font-semibold text-[16px]'>NYJ</span>
-                      <span className='text-white/90 text-[12px]'>Jets</span>
+                      <span className='text-white font-semibold text-[18px] leading-[22px]'>
+                        NYJ
+                      </span>
+                      <span className='text-white/70 text-[13px] leading-[16px]'>Jets</span>
                     </div>
-                    <div className='w-[40px] h-[40px] bg-[#40a96c] rounded-full flex items-center justify-center shadow-[0_0_15px_rgba(64,169,108,0.5)] border border-white/10 overflow-hidden'>
+                    <div className='w-[48px] h-[48px] bg-[#40a96c] rounded-full flex items-center justify-center overflow-hidden flex-shrink-0'>
                       <Image
                         src='/h2.svg'
                         alt='NYJ'
-                        width={30}
-                        height={30}
+                        width={28}
+                        height={28}
                         className='object-contain'
                       />
                     </div>
@@ -220,15 +237,15 @@ export function HeroSection() {
                 </div>
 
                 {/* Date & Time */}
-                <div className='mt-[5px] mx-[15px] mb-[15px] flex items-center justify-center gap-[20px] p-[10px] bg-[rgba(255,255,255,0.05)] border border-[rgba(255,255,255,0.1)] backdrop-blur-[10px] rounded-[14px]'>
-                  <div className='flex items-center gap-[6px]'>
-                    <Calendar size={16} className='text-white' strokeWidth={1.5} />
-                    <span className='text-white text-[14px]'>May 16, 2025</span>
+                <div className='flex items-center justify-center gap-[15px] p-[12px] bg-[rgba(255,255,255,0.1)] backdrop-blur-[10px] relative z-20 border-t border-[rgba(255,255,255,0.05)]'>
+                  <div className='flex items-center gap-[8px]'>
+                    <Calendar size={18} className='text-white/90' strokeWidth={1.5} />
+                    <span className='text-white/90 text-[15px] font-medium'>May 16, 2025</span>
                   </div>
-                  <div className='w-[1px] h-[15px] bg-white/20' />
-                  <div className='flex items-center gap-[6px]'>
-                    <Clock size={16} className='text-white' strokeWidth={1.5} />
-                    <span className='text-white text-[14px]'>8:20 PM ET</span>
+                  <div className='w-[1px] h-[16px] bg-[rgba(255,255,255,0.2)]' />
+                  <div className='flex items-center gap-[8px]'>
+                    <Clock size={18} className='text-white/90' strokeWidth={1.5} />
+                    <span className='text-white/90 text-[15px] font-medium'>8:20 PM ET</span>
                   </div>
                 </div>
               </div>
@@ -240,9 +257,14 @@ export function HeroSection() {
                 <span className='font-sans font-medium text-[18px] text-black'>
                   Pay After You Win - Get Picks
                 </span>
-                <div className='w-[24px] h-[24px] rounded-full border border-black/20 flex items-center justify-center'>
-                  <ArrowUpRight className='w-[14px] h-[14px] text-black' strokeWidth={2} />
-                </div>
+                <Image
+                  src='/ArrowIcon.png'
+                  alt='Arrow'
+                  width={19}
+                  height={20}
+                  style={{ width: '19.357px', height: '19.999px' }}
+                  className='object-contain flex-shrink-0'
+                />
               </button>
 
               <div className='flex items-center justify-center mt-[15px] text-[16px] text-white'>
