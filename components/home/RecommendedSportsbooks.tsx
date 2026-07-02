@@ -150,7 +150,7 @@ function BookCard({ book }: { book: (typeof books)[0] }) {
           <span className='text-2xl font-black text-white leading-none tracking-tight'>
             {book.amount}
           </span>
-          <span className='text-xs font-medium text-white/70 uppercase'>{book.postAmount}</span>
+          <span className='text-xs font-medium text-white uppercase'>{book.postAmount}</span>
         </div>
       </div>
 
